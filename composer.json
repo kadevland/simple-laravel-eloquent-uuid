@@ -1,0 +1,46 @@
+{
+    "name": "kadevland/simple-laravel-eloquent-uuid",
+    "description": "A simple Trait provides the ability to use UUID generator in your Eloquent models",
+    "keywords": [
+        "simple-laravel-eloquent-uuid",
+        "laravel uuid",
+        "eloquent uuid",
+        "database uuid",
+        "ramsey uuid",
+        "simple uuid",
+        "eloquent",
+        "laravel",
+        "UUID",
+        "Laravel",
+        "generator",
+        "model",
+        "database",
+        "php"
+    ],
+    "homepage": "https://github.com/kadevland/simple-laravel-eloquent-uuid",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kadevland",
+            "email": "kaosland@kadevland.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.2.5",
+        "laravel/framework": "^7.0",
+        "ramsey/uuid": "^3.7|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kadevland\\Eloquent\\Uuid\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kadevland\\Eloquent\\Uuid\\UuidServiceProvider"
+            ]
+        }
+    }
+}
