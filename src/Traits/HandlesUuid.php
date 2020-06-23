@@ -52,12 +52,8 @@ trait HandlesUuid
      */
     protected function resolveUuidGenerator(): UuidGenerator
     {
-        $generator = $this->resolveUuidClass();
-
-        if (class_exists($generator)) {
-            return new $generator();
-        }
-
-        return new Uuid1String();
+        return class_exists($generator = $this->resolveUuidClass())
+            ? app($generator)
+            : new Uuid1String();
     }
 }
