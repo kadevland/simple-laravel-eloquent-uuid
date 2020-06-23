@@ -2,12 +2,12 @@
 
 namespace Kadevland\Eloquent\Uuid\Tests\Models;
 
-use Kadevland\Eloquent\Uuid\Traits\HasUuidString;
+use Kadevland\Eloquent\Uuid\Traits\HasUuid;
 use Illuminate\Database\Eloquent\Model as BaseModel;
 
 class ModelStringUuid extends BaseModel
 {
-    use HasUuidString;
+    use HasUuid;
 
     protected $table = 'test_table_with_uuids';
 

@@ -15,20 +15,12 @@ class UuidServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (\function_exists('config_path')) {
-            $this->publishes([
-                \realpath(__DIR__ . '/../config/model-uuid.php') => \config_path('model-uuid.php'),
-            ]);
+        if (!$this->app->runningInConsole()) {
+            return;
         }
-    }
 
-    /**
-     * Register any package services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
+        $this->publishes([
+            __DIR__ . '/../config/eloquent-uuid.php' => config_path('model-uuid.php')
+        ], 'simple-laravel-eloquent-uuid');
     }
 }
