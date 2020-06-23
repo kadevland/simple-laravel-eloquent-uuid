@@ -20,7 +20,7 @@ class UuidServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__ . '/../config/eloquent-uuid.php' => config_path('model-uuid.php')
+            __DIR__ . '/../config/eloquent-uuid.php' => config_path('eloquent-uuid.php')
         ], 'simple-laravel-eloquent-uuid');
     }
 
