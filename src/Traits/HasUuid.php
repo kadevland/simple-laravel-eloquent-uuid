@@ -10,7 +10,7 @@ trait HasUuid
     public function resolveUuidClass(): string
     {
         return config(
-            sprintf("eloquent-uuid.versions.%s.bytes", config('eloquent-uuid.version'))
+            sprintf("eloquent-uuid.versions.%s.string", config('eloquent-uuid.version'))
         );
     }
 }

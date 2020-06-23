@@ -5,7 +5,6 @@ namespace Kadevland\Eloquent\Uuid\Traits;
 
 
 use Kadevland\Eloquent\Uuid\Contracts\UuidGenerator;
-use Kadevland\Eloquent\Uuid\Contracts\UuidGeneratorBytes;
 use Kadevland\Eloquent\Uuid\Generators\Uuid1String;
 
 trait HandlesUuid
