@@ -33,12 +33,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Kadevland\\Eloquent\\Uuid\\": "src/"
+            "Kadevland\\Eloquent\\Uuid\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Kadevland\\Eloquent\\Uuid\\Tests\\": "tests/"
+            "Kadevland\\Eloquent\\Uuid\\Tests\\": "tests"
         }
     },
     "extra": {
@@ -49,6 +49,7 @@
         }
     },
     "require-dev": {
-        "orchestra/testbench": "^5"
+        "orchestra/testbench": "^5",
+        "phpunit/phpunit": "^9.3@dev"
     }
 }

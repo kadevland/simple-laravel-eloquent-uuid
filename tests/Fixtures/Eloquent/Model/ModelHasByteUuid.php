@@ -1,19 +1,19 @@
 <?php
 
-namespace Kadevland\Eloquent\Uuid\Tests\Models;
+namespace Kadevland\Eloquent\Uuid\Tests\Fixtures\Eloquent\Model;
 
 use Kadevland\Eloquent\Uuid\Traits\HasByteUuid;
 use Illuminate\Database\Eloquent\Model as BaseModel;
 
-class ModelBytesUuid extends BaseModel
+class ModelHasByteUuid extends BaseModel
 {
     use HasByteUuid;
 
-    protected $table = 'test_table_with_uuids';
+    protected $table = 'table_uuids';
 
     protected $keyType = 'uuid';
 
     public $incrementing = false;
 
-    protected $fillable = ['id'];
+    protected $guarded = [];
 }

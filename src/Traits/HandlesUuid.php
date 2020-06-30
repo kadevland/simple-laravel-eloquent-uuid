@@ -9,32 +9,63 @@ use Kadevland\Eloquent\Uuid\Generators\Uuid1String;
 
 trait HandlesUuid
 {
-    public static function bootHasUuidBytes(): void
+    /**
+     * 
+     * @return void 
+     */
+    public static function bootHandlesUuid(): void
     {
-        static::creating(static function (HandlesUuid $model) {
-            $model->generateUuidPrimaryKey();
+        static::creating(static function ($model) {
+
+            static::generateUuidPrimaryKeyIfNeed($model);
         });
 
-        static::saving(static function (HandlesUuid $model) {
-            $model->generateUuidPrimaryKey();
+        static::saving(static function ($model) {
+
+            static::generateUuidPrimaryKeyIfNeed($model);
         });
     }
 
-    protected function generateUuidPrimaryKey(): void
+    /**
+     * 
+     * @param mixed $model 
+     * @return bool 
+     */
+    protected static function isFilledPrimaryKey($model): bool
     {
-        if ($this->needUuidPrimaryKey()) {
-            $this->{$this->getKeyName()} = $this->generateUuid();
+
+        return isset($model->attributes[$model->getKeyName()]) && !is_null($model->attributes[$model->getKeyName()]);
+    }
+
+    /**
+     * 
+     * @param mixed $model 
+     * @return void 
+     */
+    protected static function generateUuidPrimaryKeyIfNeed($model): void
+    {
+        if (static::needUuidPrimaryKey($model) && !static::isFilledPrimaryKey($model)) {
+            static::setUuidPrimaryKey($model);
         }
+    }
+
+    /**
+     * 
+     * @param mixed $model 
+     * @return void 
+     */
+    protected static function setUuidPrimaryKey($model): void
+    {
+        $model->{$model->getKeyName()} = $model->generateUuid();
     }
 
     /**
      * @return bool
      */
-    protected function needUuidPrimaryKey(): bool
+    protected static function needUuidPrimaryKey($model): bool
     {
-        return in_array($this->getKeyType(), ['uuid', 'string'])
-            && !$this->getIncrementing()
-            && empty($this->{$this->getKeyName()});
+
+        return in_array($model->getKeyType(), ['uuid', 'string']) && !$model->getIncrementing();
     }
 
     /**

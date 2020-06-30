@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6aecc7d7824753cbfa9037e1ed9f6e4",
+    "content-hash": "165718e66156efec251cc33a1e37736a",
     "packages": [
         {
             "name": "brick/math",
@@ -4094,12 +4094,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "899db927169682058ed8875c3d0c7f30c1fa4ed2"
+                "reference": "fbb8916024f00b48a0c93e7a480d49f191f62b2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/899db927169682058ed8875c3d0c7f30c1fa4ed2",
-                "reference": "899db927169682058ed8875c3d0c7f30c1fa4ed2",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fbb8916024f00b48a0c93e7a480d49f191f62b2b",
+                "reference": "fbb8916024f00b48a0c93e7a480d49f191f62b2b",
                 "shasum": ""
             },
             "require": {
@@ -4174,7 +4174,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2020-06-22T14:15:03+00:00"
+            "time": "2020-06-24T14:53:44+00:00"
         },
         {
             "name": "sebastian/code-unit",
@@ -4932,7 +4932,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "phpunit/phpunit": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

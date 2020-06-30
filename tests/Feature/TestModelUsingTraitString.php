@@ -88,6 +88,7 @@ class TestModelUsingTraitString extends \Orchestra\Testbench\TestCase
             ->getSchemaBuilder()
             ->create('test_table_with_uuids', function (Blueprint $table): void {
                 $table->uuid('id')->primary();
+                $table->string('tag')->nullable();
                 $table->timestamps();
             });
     }
