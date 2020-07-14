@@ -1,4 +1,4 @@
-## [v1.0.1 (2020-07-14)](https://github.com/kadevland/simple-laravel-eloquent-uuid/releases/tag/v1.0.0)
+## [v1.0.1 (2020-07-14)](https://github.com/kadevland/simple-laravel-eloquent-uuid/releases/tag/v1.0.1)
 
 ### Added
 
