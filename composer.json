@@ -41,6 +41,9 @@
             "Kadevland\\Eloquent\\Uuid\\Tests\\": "tests"
         }
     },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
     "extra": {
         "laravel": {
             "providers": [
@@ -50,6 +53,6 @@
     },
     "require-dev": {
         "orchestra/testbench": "^5",
-        "phpunit/phpunit": "^9.3@dev"
+        "phpunit/phpunit": "^9.2"
     }
 }
